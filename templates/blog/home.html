@@ -1,0 +1,15 @@
+
+<p>Harga Per Kilo: {{last}}</p>
+{% for s in shipping %}
+<ul>
+    
+    <li>{{s.nama}}</li>
+    <li>{{ s.berat }}</li>
+    <li>{{s.biaya_2}}</li>     
+    
+</ul>
+{% endfor %}
+<a href="{% url 'create' %}">create</a><br>
+<a href="{% url 'tarif' %}">tarif per kilo</a>
+
+

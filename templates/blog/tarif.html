@@ -1,0 +1,10 @@
+{% for t in tarif %}
+
+<ul>
+    <li>{{t.harga}}</li>
+    <li>{{t.create_at}}</li>
+</ul>
+{% endfor %}
+
+<a href="{% url 'ganti-tarif' %}">ganti tarif</a><br>
+<a href="{% url 'home' %}">home</a>
