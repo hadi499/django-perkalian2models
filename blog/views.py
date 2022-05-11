@@ -4,7 +4,7 @@ from blog.models import Shipping, TarifPerKilo
 
 
 def home(request):
-    shipping = Shipping.objects.all()
+    shipping = Shipping.objects.all().order_by('-id')
     last = TarifPerKilo.objects.last()
 
     return render(request, 'blog/home.html', {'shipping': shipping, 'last': last})
@@ -29,7 +29,7 @@ def create(request):
 
 
 def tarifperkilo(request):
-    tarif = TarifPerKilo.objects.all()
+    tarif = TarifPerKilo.objects.all().order_by('-id')
 
     return render(request, 'blog/tarif.html', {'tarif': tarif})
 

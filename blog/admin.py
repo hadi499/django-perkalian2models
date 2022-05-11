@@ -4,7 +4,7 @@ from .models import Shipping, TarifPerKilo
 
 @admin.register(Shipping)
 class ShippingAdmin(admin.ModelAdmin):
-    list_display = ['nama', 'berat', 'biaya_2']
+    list_display = ['nama', 'berat', 'biaya', 'create_at']
 
 
 @admin.register(TarifPerKilo)

@@ -14,8 +14,9 @@ class TarifPerKilo(models.Model):
 class Shipping(models.Model):
     nama = models.CharField(max_length=100)
     berat = models.IntegerField()
+    create_at = models.DateTimeField(default=timezone.now)
 
-    def biaya_2(self):
+    def biaya(self):
         last = TarifPerKilo.objects.last()
         a = str(last)
         b = int(a)
